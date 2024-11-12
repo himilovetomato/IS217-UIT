@@ -100,8 +100,7 @@ def main():
     
     try:
         df = pd.read_csv(input_path, encoding='UTF-8', low_memory=False)
-
-        # Standardize columns
+	    
         standardize_column(df, "Employment", employment_replacement)
         standardize_column(df, "PlatformHaveWorkedWith", platform_replacement)
         standardize_column(df, "LanguageHaveWorkedWith", programming_language_replacement)
