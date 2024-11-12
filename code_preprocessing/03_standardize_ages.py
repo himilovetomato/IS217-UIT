@@ -38,11 +38,9 @@ def main():
     try:
         df = pd.read_csv(input_path, encoding='UTF-8', low_memory=False)
         
-        # Columns to replace values in
         cols = ["Age", "Age1stCode"]
         replace_values(df, cols, replace_dict)
         
-        # Calculate age range (assuming calculate_age_range is defined elsewhere)
         calculate_cols = ["Age", "Age1stCode"]
         df = calculate_age_range(*calculate_cols)
         
